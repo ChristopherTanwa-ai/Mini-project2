@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const data = require('./data.json');
 
-
+app.use(express.static(path.join(__dirname,'public')))
 app.set('view engine', 'ejs')
 app.set('views',path.join(__dirname,'/views'))
 
@@ -20,8 +20,8 @@ app.get('/random', (req,res) =>{
 // Path parameter
 app.get('/:product',(req,res) => {
     console.log(req.params)
-    const product = req.params;
-    res.render('product',{name: product} )
+    const {product} = req.params;
+    res.render('product',{product} )
 })
 
 app.get('/dog', (req, res) => {
