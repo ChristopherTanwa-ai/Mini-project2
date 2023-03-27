@@ -2,16 +2,14 @@ const express = require('express');
 const { data } = require('jquery');
 const path = require('path');
 const app = express();
-const adata = require('./data.json');
+const mainData = require('./data.json');
 
 app.use(express.static(path.join(__dirname,'public')))
 app.set('view engine', 'ejs')
 app.set('views',path.join(__dirname,'/views'))
 
 app.get('/',(req,res) => {
-   
-    console.log(hmm);
-    res.render('home',{...adata[Hilma]} );
+    res.render('home',{...mainData[Hilma]} );
 })
 
 app.get('/random', (req,res) =>{
