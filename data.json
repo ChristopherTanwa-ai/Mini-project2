@@ -1,9 +1,9 @@
 {
     "Hilma": {
-        "title": "Hilma Poster",
-        "price": 300,
+        "artist": "Hilma af Klint",
+        "title": "The Ten Largest Childhood",
+        "price": 250,
         "description":"bla bla bla",
-        "img": "images\\Hilma af Klint - The Ten Largest Childhood No. 2 Plakat.png"
-        
+        "img": "images/Hilma af Klint - The Ten Largest Childhood No. 2 Plakat.png"
     }
 }

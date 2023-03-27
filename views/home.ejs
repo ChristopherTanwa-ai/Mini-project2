@@ -4,16 +4,200 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.js"></script>
     <title>Document</title>
   </head>
+
   <body>
-    <h1>The home page <%=  'Chris'.toUpperCase()  %></h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cupiditate
-      velit, quaerat inventore rem magni officiis? Nobis sint ipsum rerum velit
-      voluptas quae nemo necessitatibus obcaecati perspiciatis, iste, officiis
-      autem?
-    </p>
-    <a href="random">Link</a>
+    <header class="nav">
+      <div class="logo">
+        <a href="/Src/index.html">
+          <img
+            src="https://www.svgrepo.com/show/59465/mona-lisa.svg"
+            alt="logo"
+          />
+        </a>
+      </div>
+
+      <div class="title">
+        <a id="all-products-text" href="/Src/allPosters.html">
+          <div>All Products</div>
+        </a>
+      </div>
+
+      <div class="information">
+        <div class="login">
+          <a href="#test2">
+            <div class="fill">
+              <a href="/Src/Login.html">
+                <img
+                  src="https://www.svgrepo.com/show/497407/profile-circle.svg"
+                  alt="logo"
+                />
+              </a>
+            </div>
+          </a>
+        </div>
+        <div class="basket">
+          <div class="fill">
+            <a href="/Src/Basket.html">
+              <img
+                src="https://www.svgrepo.com/show/477196/basket-free-material.svg"
+                alt="logo"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-fluid p-0">
+      <div class="row">
+        <div class="col">
+          <div class="background">
+            <div class="flex-container">
+              <div class="flex-item"><p id="message">Welcome!</p></div>
+              <a href="allPosters.html">
+                <div class="flex-item2">
+                  <p><font color="black">Browse all posters</font></p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="product-section" class="container-fluid">
+    
+      <div id="section-header" class="row">
+        <div class="col"><h2 id="index-h2-header">New Posters</h2></div>
+      </div>
+      <div class="row justify-content-center">
+        <div id="Posters" class="col">
+          <div class="card border-0 bg-transparent" style="width: 18rem">
+            <a href="/Src/Products/HilmaChildhood.html"
+              ><img
+                src="<%= Hilma.img %>"
+                class="card-img-top"
+                alt="..."
+            /></a>
+            <div class="card-body bg-transparent">
+              <h6 class="card-title my-0">
+                <a href="/Src/Products/HilmaChildhood.html" id="link-text"
+                  >Hilma af Klint</a
+                >
+              </h6>
+              <p class="card-text">
+                <a href="/Src/Products/ProductPage.html" id="link-text"
+                  >The Ten Largest Childhood</a
+                >
+              </p>
+              <p class="card-text">
+                <a href="/Src/Products/ProductPage.html" id="price-text"
+                  >250,00 kr</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="Posters" class="col">
+          <div class="card border-0 bg-transparent" style="width: 18rem">
+            <a href="/src/Products/KlorofylSelfPortrait.html"
+              ><img
+                src="../Images/Screenshot 2023-02-21 at 19-51-39 SELF-PORTRAIT 02.png"
+                class="card-img-top"
+                alt="..."
+            /></a>
+            <div class="card-body bg-transparent">
+              <h6 class="card-title my-0">
+                <a href="/src/Products/KlorofylSelfPortrait.html" id="link-text"
+                  >Klorofyl</a
+                >
+              </h6>
+              <p class="card-text">
+                <a href="/Src/Products/ProductPage.html" id="link-text"
+                  >SELF-PORTRAIT</a
+                >
+              </p>
+              <p class="card-text"><a href="" id="price-text">255,00 kr</a></p>
+            </div>
+          </div>
+        </div>
+        <div id="Posters" class="col">
+          <div class="card border-0 bg-transparent" style="width: 18rem">
+            <a
+              href="/src/Products/MonetTheArtistsGaden.html"
+              <a
+              href="/src/Products/MonetTheArtistsGaden.html"
+              ><img
+                src="../Images/Monet - The Artist's Garden at Vétheuil Plakat.png"
+                src="../Images/Monet - The Artist's Garden at Vétheuil Plakat.png"
+                class="card-img-top"
+                alt="..."
+            /></a>
+            <div class="card-body">
+              <h6 class="card-title my-0">
+                <a href="/src/Products/MonetTheArtistsGaden.html" id="link-text"
+                  >Monet</a
+                >
+              </h6>
+              <p class="card-text">
+                <a href="/src/Products/MonetTheArtistsGaden.html" id="link-text"
+                  >The Artist's Garden at Vétheuil</a
+                >
+              </p>
+              <p class="card-text">
+                <a
+                  href="/src/Products/MonetTheArtistsGaden.html"
+                  id="price-text"
+                  >200,00 kr</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="Posters" class="col">
+          <div class="card border-0 bg-transparent" style="width: 18rem">
+            <a href="/Src/Products/UnPoDiBlu.html"
+              ><img
+                src="../Images/Un Po' Di Blu No2 Plakat.png"
+                class="card-img-top"
+                alt="..."
+            /></a>
+            <div class="card-body">
+              <h6 class="card-title my-0">
+                <a href="/Src/Products/ProductPage.html" id="link-text">Hmmm</a>
+              </h6>
+              <p class="card-text">
+                <a href="/Src/Products/ProductPage.html" id="link-text"
+                  >Un Po' Di Blu</a
+                >
+              </p>
+              <p class="card-text">
+                <a href="/Src/Products/ProductPage.html" id="price-text"
+                  >300,00 kr</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      document.body.onload = addName();
+    </script>
   </body>
 </html>
