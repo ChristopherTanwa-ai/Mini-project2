@@ -1,0 +1,270 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+h1 {text-align:center}
+
+#index-h2-header{
+    font-family: 'Gloock';
+    color:rgb(27, 15, 56);
+    font-weight: 400;
+    text-align:center;
+    padding-top: 2%;
+    padding-bottom:2%;
+}
+#product-section{
+    background: linear-gradient(360deg, rgb(155, 187, 201) 0%, rgba(200,221,220,1) 39%, rgba(233,239,239,1) 75%, rgba(255,255,255,1) 100%); 
+    padding-top: 2%;
+}
+.card{
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    
+}
+.card-body{
+    background-color: transparent !important;
+}
+#link-text{
+    font-family: 'Hind';
+    color: black;
+    text-decoration: none;
+}
+#price-text{
+    font-size: 1rem;
+    font-family: 'Hind';
+    color: red;
+    text-decoration: none;
+   
+}
+.card-title{
+    margin-bottom: 0%;
+    font-weight: 600;
+}
+.card-text{
+    margin-bottom: 0%;
+}
+body{
+    margin: 0;
+    padding: 0px;
+}
+
+.background{
+    width: 100%;
+    height: 65vh;
+    background-image: url(../Images/Gw.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+    align-content: space-between;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20pt;
+    position: relative;
+    /* top: 330px;*/
+  }
+
+  .flex-item { 
+    margin-top: 7%;
+    margin-bottom: auto;
+    height: 37px;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 500px;
+
+  }
+
+  .flex-item p{
+    font-family: 'Gloock';
+
+  }
+  .flex-item2 {
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 500px;
+    margin-top: 50px;
+  }
+
+  .flex-item2:hover{
+    box-shadow: 0 0 2px 1px rgba(0, 0,0, 1);
+    color: black;
+}
+.flex-item2 p{
+    font-family:'Josfin sans, sans-serif';
+    font-weight: 100;
+}
+
+
+
+header.nav {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    background-color:#9ebed7db;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+header.nav .logo {
+    width: 60px;
+    height: 100%;
+    position: relative;
+}
+
+header.nav .logo img {
+    position: absolute;
+    width: 30px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header.nav .title {
+    font-family: 'Gloock';
+    font-weight: 300;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header.nav.title a{
+    text-decoration: none;
+}
+
+#all-products-text{
+    text-decoration: none;
+    color: black;
+}
+
+header.nav .information {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+}
+
+header.nav .information > div {
+    border-radius: 100%;
+    overflow: hidden;
+}
+ 
+header.nav .information .login {
+    width: 30px;
+    height: 30px;
+    margin: 0.5rem;
+    position: relative;
+}
+
+header.nav .information .basket {
+    width: 30px;
+    height: 30px;
+    margin: 0.5rem;
+    position: relative;
+}
+
+.fill {
+    position: absolute;
+    inset: 0;
+   /* background-color: #000;*/
+}
+
+.fill img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.my-test {
+    width: 100%;
+    height: 200vh;
+    background-color: rgb(105, 20, 20);
+}
+
+#test2 {
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(20, 20, 146);
+}
+
+@media screen and (max-width: 990px) {
+    #cart-text {
+      justify-content: start !important;
+    }
+  }
+
+  @media screen and (max-width: 990px) {
+   .row .h4 {
+     font-size: medium;
+    }
+  }
+  @media screen and (max-width: 990px) {
+    .row .h2 {
+      font-size: large;
+      font-weight: 700;
+     }
+   }
+
+   @media screen and (max-width: 990px) {
+    .card-body .col-md-2 {
+    
+      justify-content: center !important;
+      padding-top: 3%;
+     }
+   }
+
+   @media screen and (max-width: 990px) {
+    .card-body .col-md-2 p {
+    text-align: center !important;
+      justify-content: center !important;
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+      font-size: medium;
+     }
+   }
+
+   @media screen and (max-width: 990px) {
+    #price-total {
+      float:left !important;
+     }
+   }
+   @media screen and (max-width: 990px) {
+    #bottom-btn {
+        padding-bottom: 10%;
+        justify-content: center !important;
+     }
+   }
+
+   #price-total{
+    float: right;
+   }
+   @media screen and (max-width: 990px) {
+    #remove-btn {
+        padding-top: 8%;
+      justify-content: center !important;
+    }
+  }
+
+#left-section{
+    background-color: whitesmoke;
+    opacity: 0.7;
+    min-height: 50vh;
+}
+
+
+
+

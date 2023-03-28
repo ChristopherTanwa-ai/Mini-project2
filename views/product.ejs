@@ -4,12 +4,177 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><% name %></title>
+    <title> product </title> 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/style.css"/>
 </head>
+<header class="nav">
+  <div class="logo">
+    <a href="/views/home.ejs">
+      <img src="https://www.svgrepo.com/show/59465/mona-lisa.svg" alt="logo">
+    </a>
+    
+  </div>
+  
+  <div class="title">
+    <a id="all-products-text" href="/Src/allPosters.html">
+      <div   >
+        All Products
+    </div>
+    </a>
+  </div>
+
+ <!-- <div class="filterObjects monet impressionist a2"></div>-->
+
+  <div class="information">
+      <div class="login">
+          <a href="#test2">
+              <div class="fill">
+                <a href="/Src/Login.html">
+                  <img src="https://www.svgrepo.com/show/497407/profile-circle.svg" alt="logo">
+                </a>
+              </div>    
+          </a>
+      </div>
+      <div class="basket">
+          <div class="fill">
+            <a href="/Src/Basket.html">
+              <img src="https://www.svgrepo.com/show/477196/basket-free-material.svg" alt="logo">
+
+            </a>
+          </div>
+      </div>
+  </div>
+</header>
+
 <body>
-    <h1>This page shows <% name %> page</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col" id="prodimgcol">
+        <img
+          src="/Images/APpeacock.png"
+          class="img-fluid rounded mx-auto d-block"
+          id="prodimg"
+          alt=""
+        />
+      </div>
+      <div class="col mx-auto my-auto">
+        <h2 id="prodheader">A.P Atelier</h2>
+        <h5 id="prodheader">Peacock</h5>
+        <h6 id="price">300,00kr</h6>
+        <div id="prodtext" class="text-body">
+          <p>
+              A.P. Atelier is a Copenhagen based online art gallery. 
+              The artworks have been specially created in collaboration with
+              a number of renowned artists. The gallery inspiration comes from
+              contemporary trends, while paing homage to the original style seen
+              at dedicated art exhibitions.
+          </p>
+        </div>
+        <button type="button" class="btn btn-outline-primary" id="buy" onclick = "addToCart(1)">
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="product-section" class="container-fluid">
+    <div id="section-header" class="row">
+      <div class="col">
+        <h2 id="index-h2-header">Posters you might also be interested in</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center ">
+      <div id="Posters" class="col">
+        <div class="card border-0 bg-transparent" style="width: 18rem">
+          <a href="/src/Products/HilmaChildhood.html"
+            ><img
+              src="/Images/Hilma af Klint - The Ten Largest Childhood No. 2 Plakat.png"
+              class="card-img-top"
+              alt="..."
+          /></a>
+          <div class="card-body bg-transparent">
+            <h6 class="card-title my-0">
+              <a href="/src/Products/HilmaChildhood.html" id="link-text"
+                >Hilma af Klint</a
+              >
+            </h6>
+            <p class="card-text">
+              <a href="/src/Products/HilmaChildhood.html" id="link-text"
+                >The Ten Largest Childhood</a
+              >
+            </p>
+            <p class="card-text">
+              <a href="/src/Products/HilmaChildhood.html" id="price-text">250,00 kr</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="Posters" class="col">
+        <div class="card border-0 bg-transparent" style="width: 18rem">
+          <a href="/src/Products/KlorofylSelfPortrait.html"
+            ><img
+              src="/Images/Screenshot 2023-02-21 at 19-51-39 SELF-PORTRAIT 02.png"
+              class="card-img-top"
+              alt="..."
+          /></a>
+          <div class="card-body bg-transparent">
+            <h6 class="card-title my-0">
+              <a href="/src/Products/KlorofylSelfPortrait.html" id="link-text">Klorofyl</a>
+            </h6>
+            <p class="card-text">
+              <a href="/src/Products/KlorofylSelfPortrait.html" id="link-text">SELF-PORTRAIT</a>
+            </p>
+            <p class="card-text"><a href="" id="price-text">255,00 kr</a></p>
+          </div>
+        </div>
+      </div>
+      <div id="Posters" class="col">
+        <div class="card border-0 bg-transparent" style="width: 18rem">
+          <a href="/Src/Products/MonetTheArtistsGaden.html"
+            ><img
+              src="/Images/Monet - The Artist's Garden at Vétheuil Plakat.png"
+              class="card-img-top"
+              alt="..."
+          /></a>
+          <div class="card-body">
+            <h6 class="card-title my-0">
+              <a href="/Src/Products/MonetTheArtistsGaden.html" id="link-text">Monet</a>
+            </h6>
+            <p class="card-text">
+              <a href="/Src/Products/MonetTheArtistsGaden.html" id="link-text"
+                >The Artist's Garden at Vétheuil</a
+              >
+            </p>
+            <p class="card-text">
+              <a href="/Src/Products/MonetTheArtistsGaden.html" id="price-text">200,00 kr</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="Posters" class="col">
+        <div class="card border-0 bg-transparent" style="width: 18rem">
+          <a href="/Src/Products/UnPoDiBlu.html"
+            ><img
+              src="/Images/Un Po' Di Blu No2 Plakat.png"
+              class="card-img-top"
+              alt="..."
+          /></a>
+          <div class="card-body">
+            <h6 class="card-title my-0">
+              <a href="/Src/Products/UnPoDiBlu.html" id="link-text">The indigo collection No2</a>
+            </h6>
+            <p class="card-text">
+              <a href="/Src/Products/UnPoDiBlu.html" id="link-text">Un Po' Di Blu</a>
+            </p>
+            <p class="card-text">
+              <a href="/Src/Products/UnPoDiBlu.html" id="price-text">300,00 kr</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </body>
 </html>
