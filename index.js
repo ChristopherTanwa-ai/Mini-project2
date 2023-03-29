@@ -25,7 +25,6 @@ app.get('/product/:poster',(req,res) =>{
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
 
-
 function randomPosters(artist){
     const posters = mainData.Posters;
     const posterKeys = Object.keys(posters);
