@@ -83,88 +83,88 @@
     <div class="row justify-content-center ">
       <div id="Posters" class="col">
         <div class="card border-0 bg-transparent" style="width: 18rem">
-          <a href="/product/HilmaChildhood"
+          <a href="/product/<%= rndPosters[1].id %>"
             ><img
-              src="<%= img %>"
+              src="<%= rndPosters[1].img %>"
               class="card-img-top"
               alt="..."
           /></a>
           <div class="card-body bg-transparent">
             <h6 class="card-title my-0">
-              <a href="/product/HilmaChildhood" id="link-text"
-                >Hilma af Klint</a
+              <a href="/product/<%= rndPosters[1].id %>" id="link-text"
+                ><%= rndPosters[1].artist %></a
               >
             </h6>
             <p class="card-text">
-              <a href="/product/HilmaChildhood" id="link-text"
-                >The Ten Largest Childhood</a
+              <a href="/product/<%= rndPosters[1].id %>" id="link-text"
+                ><%= rndPosters[1].title %></a
               >
             </p>
             <p class="card-text">
-              <a href="/product/HilmaChildhood" id="price-text">250,00 kr</a>
+              <a href="/product/<%= rndPosters[1].id %>" id="price-text"><%= rndPosters[1].price %>,00 kr</a>
             </p>
           </div>
         </div>
       </div>
       <div id="Posters" class="col">
         <div class="card border-0 bg-transparent" style="width: 18rem">
-          <a href="/product/KlorofylSelfPortrait"
+          <a href="/product/<%= rndPosters[2].id %>"
             ><img
-              src="/Images/Screenshot 2023-02-21 at 19-51-39 SELF-PORTRAIT 02.png"
+              src="<%= rndPosters[2].img %>"
               class="card-img-top"
               alt="..."
           /></a>
           <div class="card-body bg-transparent">
             <h6 class="card-title my-0">
-              <a href="/product/KlorofylSelfPortrait" id="link-text">Klorofyl</a>
+              <a href="/product/<%= rndPosters[2].id %>" id="link-text"><%= rndPosters[2].artist %></a>
             </h6>
             <p class="card-text">
-              <a href="/product/KlorofylSelfPortrait" id="link-text">SELF-PORTRAIT</a>
+              <a href="/product/<%= rndPosters[2].id %>" id="link-text"><%= rndPosters[2].title %></a>
             </p>
-            <p class="card-text"><a href="" id="price-text">255,00 kr</a></p>
+            <p class="card-text"><a href="" id="price-text"><%= rndPosters[2].price%>,00 kr</a></p>
           </div>
         </div>
       </div>
       <div id="Posters" class="col">
         <div class="card border-0 bg-transparent" style="width: 18rem">
-          <a href="/product/MonetTheArtistsGaden"
+          <a href="<%= rndPosters[3].id %>"
             ><img
-              src="/Images/Monet - The Artist's Garden at Vétheuil Plakat.png"
+              src="<%= rndPosters[3].img %>"
               class="card-img-top"
               alt="..."
           /></a>
           <div class="card-body">
             <h6 class="card-title my-0">
-              <a href="/product/MonetTheArtistsGaden" id="link-text">Monet</a>
+              <a href="<%= rndPosters[3].id %>" id="link-text"><%= rndPosters[3].artist %></a>
             </h6>
             <p class="card-text">
-              <a href="/product/MonetTheArtistsGaden" id="link-text"
-                >The Artist's Garden at Vétheuil</a
+              <a href="<%= rndPosters[3].id %>" id="link-text"
+                ><%= rndPosters[3].title %></a
               >
             </p>
             <p class="card-text">
-              <a href="/product/MonetTheArtistsGaden" id="price-text">200,00 kr</a>
+              <a href="<%= rndPosters[3].id %>" id="price-text"><%= rndPosters[3].price %>,00 kr</a>
             </p>
           </div>
         </div>
       </div>
       <div id="Posters" class="col">
         <div class="card border-0 bg-transparent" style="width: 18rem">
-          <a href="/product/UnPoDiBlu"
+          <a href="<%= rndPosters[0].id %>"
             ><img
-              src="/Images/Un Po' Di Blu No2 Plakat.png"
+              src="<%= rndPosters[0].img %>"
               class="card-img-top"
               alt="..."
           /></a>
           <div class="card-body">
             <h6 class="card-title my-0">
-              <a href="/product/UnPoDiBlu" id="link-text">The indigo collection No2</a>
+              <a href="<%= rndPosters[0].id %>" id="link-text"><%= rndPosters[0].artist %></a>
             </h6>
             <p class="card-text">
-              <a href="/product/UnPoDiBlu" id="link-text">Un Po' Di Blu</a>
+              <a href="<%= rndPosters[0].id %>" id="link-text"><%= rndPosters[0].title %></a>
             </p>
             <p class="card-text">
-              <a href="/product/UnPoDiBlu" id="price-text">300,00 kr</a>
+              <a href="<%= rndPosters[0].id %>" id="price-text"><%= rndPosters[0].price %>,00 kr</a>
             </p>
           </div>
         </div>
