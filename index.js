@@ -9,7 +9,7 @@ app.set('view engine', 'ejs')
 app.set('views',path.join(__dirname,'/views'))
 
 app.get('/',(req,res) => {
-    res.render('home',{...mainData.Posters} );
+    res.render('home',{...mainData.Posters,...mainData.HomePictures} );
 })
 
 app.get('/product/:poster',(req,res) =>{
@@ -18,7 +18,5 @@ app.get('/product/:poster',(req,res) =>{
     console.log(artist.artist);
     res.render('product', {...artist})
 })
-
-
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));

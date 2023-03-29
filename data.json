@@ -28,5 +28,9 @@
             "description": "Taishō are design posters with inspiration from Scandinavia and Japan. Taishō is a Japanese word for contrast ",
             "img": "/images/TaishoSundayMorning.png"
         }
-    }
+    },
+
+    "HomePictures" :{
+        "coverPhoto":"/images/Gw.jpg"
+    } 
 }
