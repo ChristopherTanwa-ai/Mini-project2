@@ -27,7 +27,15 @@
             "price": 230,
             "description": "Taishō are design posters with inspiration from Scandinavia and Japan. Taishō is a Japanese word for contrast ",
             "img": "/images/TaishoSundayMorning.png"
+        },  
+        "AlberoDeLimone": {
+            "artist": "Positano",
+            "title": "Albero Di Limone",
+            "price": 200,
+            "description": "Positano is a fishing village and one of the most famous places on the Amalfi Coast. The Amalfi Coast is famous for its gorgeous nature. With it's bright and beautiful colors this print of lemons will brighten up any space, whether it's a kitchen or any other room in the house. ",
+            "img": "/images/AlberoDeLimone.jpg.webp"
         }
+        
     },
 
     "HomePictures" :{
