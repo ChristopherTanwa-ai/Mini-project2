@@ -12,7 +12,8 @@ app.set('views',path.join(__dirname,'/views'))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/',(req,res) => {
-    res.render('home',{...mainData.Posters,...mainData.HomePictures} );
+    const rndPosters = randomPosters();
+    res.render('home',{...mainData.Posters,rndPosters} );
 })
 
 app.get('/product/:poster',(req,res) =>{
