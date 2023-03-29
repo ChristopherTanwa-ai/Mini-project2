@@ -1,9 +1,36 @@
 {
-    "Hilma": {
-        "artist": "Hilma af Klint",
-        "title": "The Ten Largest Childhood",
-        "price": 250,
-        "description":"bla bla bla",
-        "img": "images/Hilma af Klint - The Ten Largest Childhood No. 2 Plakat.png"
-    }
+    "Posters": {
+        "HilmaChildhood": {
+            "artist": "Hilma af Klint",
+            "title": "The Ten Largest Childhood",
+            "price": 250,
+            "description": "Hilma af Klint's artistic talents showed early, as did her interest in spiritualism and philosophy. In recent years, her art has become more relevant than ever. Hilma af Klint's sense of shapes and colors in her distinctive art style is like a connection between the invisible spirit world and the visible, real one we live in. Big, bold shapes and fantastic color combinations make her artwork appeal to so many. ",
+            "img": "/images/Hilma af Klint - The Ten Largest Childhood No. 2 Plakat.png"
+        },
+        "SelfPortrait": {
+            "artist": "Klorofyl",
+            "title": "Self-Portrait",
+            "price": 255,
+            "description": "The art poster is an original work of art, which was painted with oil paint in 2022. Then photographed and edited and set up digitally. The art poster is a self-portrait, and describes chaos, calm, freedom and enjoyment.",
+            "img": "/images/Klorofyl.png"
+        },
+        "ArtistGarden": {
+            "artist": "Claude Monet",
+            "title": "The Artist's Aarden at Vétheuil",
+            "price": 200,
+            "description": "The years that Monet spent at a rented pink house in Vétheuil were among the most difficult of his life. The market for his work had collapsed; his wife fell ill and died; his servants all quit. And yet the pictures he painted there, in his lush, sunny garden conceived as an outdoor studio, are among the most exuberant of his career. ",
+            "img": "/images/Monet - The Artist's Garden at Vetheuil Plakat.png"
+        },
+        "SundayMorning": {
+            "artist": "Taisho",
+            "title": "Sunday Morning",
+            "price": 230,
+            "description": "Taishō are design posters with inspiration from Scandinavia and Japan. Taishō is a Japanese word for contrast ",
+            "img": "/images/TaishoSundayMorning.png"
+        }
+    },
+
+    "HomePictures" :{
+        "coverPhoto":"/images/Gw.jpg"
+    } 
 }

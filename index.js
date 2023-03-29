@@ -11,29 +11,14 @@ app.set('views',path.join(__dirname,'/views'))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/',(req,res) => {
-    res.render('home',{...mainData[Hilma]} );
+    res.render('home',{...mainData.Posters,...mainData.HomePictures} );
 })
 
-app.get('/random', (req,res) =>{
-    const num =  Math.floor(Math.random() *10) + 1;
-    res.render('random', {rand: num})
+app.get('/product/:poster',(req,res) =>{
+    const {poster} = req.params;
+    const artist = mainData.Posters[poster]
+    console.log(artist.artist);
+    res.render('product', {...artist})
 })
 
-app.get('/product',(req,res) =>{
-    res.render('product')
-})
-// Path parameter
-/**
-app.get('/:product',(req,res) => {
-    console.log(req.params)
-    const product = req.params;
-    res.render('product',{name: product} )
-})
- */
-app.get('/dog', (req, res) => {
-    console.log("we got a dog request")
-    res.send("Doogo")
-})
-
-
-app.listen(8000, () => console.log('Example app listening on port 8000!'));
+app.listen(3000, () => console.log('Example app listening on port 3000!'));

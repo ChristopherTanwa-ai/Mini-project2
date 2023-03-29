@@ -14,7 +14,7 @@
   <body>
     <header class="nav">
       <div class="logo">
-        <a href="/Src/index.html">
+        <a href="/">
           <img
             src="https://www.svgrepo.com/show/59465/mona-lisa.svg"
             alt="logo"
@@ -76,29 +76,29 @@
       <div id="section-header" class="row">
         <div class="col"><h2 id="index-h2-header">New Posters</h2></div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center">      
         <div id="Posters" class="col">
           <div class="card border-0 bg-transparent" style="width: 18rem">
-            <a href="/Src/Products/HilmaChildhood.html"
+            <a href="/product/HilmaChildhood"
               ><img
-                src="<%= Hilma.img %>"
+                src="<%= HilmaChildhood.img %>"
                 class="card-img-top"
                 alt="..."
             /></a>
             <div class="card-body bg-transparent">
               <h6 class="card-title my-0">
-                <a href="/Src/Products/HilmaChildhood.html" id="link-text"
-                  >Hilma af Klint</a
+                <a href="/product/HilmaChildhood" id="link-text"
+                  ><%= HilmaChildhood.artist %></a
                 >
               </h6>
               <p class="card-text">
-                <a href="/Src/Products/ProductPage.html" id="link-text"
-                  >The Ten Largest Childhood</a
+                <a href="/product/HilmaChildhood" id="link-text"
+                  ><%= HilmaChildhood.title %></a
                 >
               </p>
               <p class="card-text">
-                <a href="/Src/Products/ProductPage.html" id="price-text"
-                  >250,00 kr</a
+                <a href="/product/HilmaChildhood" id="price-text"
+                  ><%= HilmaChildhood.price %>,00 kr </a
                 >
               </p>
             </div>
@@ -106,55 +106,54 @@
         </div>
         <div id="Posters" class="col">
           <div class="card border-0 bg-transparent" style="width: 18rem">
-            <a href="/src/Products/KlorofylSelfPortrait.html"
+            <a href="/product/SelfPortrait"
               ><img
-                src="../Images/Screenshot 2023-02-21 at 19-51-39 SELF-PORTRAIT 02.png"
+                src="<%= SelfPortrait.img %>"
                 class="card-img-top"
                 alt="..."
             /></a>
             <div class="card-body bg-transparent">
               <h6 class="card-title my-0">
-                <a href="/src/Products/KlorofylSelfPortrait.html" id="link-text"
-                  >Klorofyl</a
+                <a href="/product/SelfPortrait" id="link-text"
+                  ><%= SelfPortrait.artist %></a
                 >
               </h6>
               <p class="card-text">
-                <a href="/Src/Products/ProductPage.html" id="link-text"
-                  >SELF-PORTRAIT</a
+                <a href="/product/SelfPortrait" id="link-text"
+                  ><%= SelfPortrait.title %></a
                 >
               </p>
-              <p class="card-text"><a href="" id="price-text">255,00 kr</a></p>
+              <p class="card-text"><a href="/product/SelfPortrait" id="price-text"><%= SelfPortrait.price %>,00 kr</a></p>
             </div>
           </div>
         </div>
         <div id="Posters" class="col">
           <div class="card border-0 bg-transparent" style="width: 18rem">
             <a
-              href="/src/Products/MonetTheArtistsGaden.html"
+              href="/product/ArtistGarden"
               <a
-              href="/src/Products/MonetTheArtistsGaden.html"
+              href="/product/ArtistGarden"
               ><img
-                src="../Images/Monet - The Artist's Garden at Vétheuil Plakat.png"
-                src="../Images/Monet - The Artist's Garden at Vétheuil Plakat.png"
+                src="<%= ArtistGarden.img %>"
                 class="card-img-top"
                 alt="..."
             /></a>
             <div class="card-body">
               <h6 class="card-title my-0">
-                <a href="/src/Products/MonetTheArtistsGaden.html" id="link-text"
-                  >Monet</a
+                <a href="/product/ArtistGarden" id="link-text"
+                  ><%= ArtistGarden.artist %></a
                 >
               </h6>
               <p class="card-text">
-                <a href="/src/Products/MonetTheArtistsGaden.html" id="link-text"
-                  >The Artist's Garden at Vétheuil</a
+                <a href="/product/ArtistGarden" id="link-text"
+                  ><%= ArtistGarden.title %></a
                 >
               </p>
               <p class="card-text">
                 <a
-                  href="/src/Products/MonetTheArtistsGaden.html"
+                  href="/product/ArtistGarden"
                   id="price-text"
-                  >200,00 kr</a
+                  ><%= ArtistGarden.price %>,00 kr</a
                 >
               </p>
             </div>
@@ -162,24 +161,24 @@
         </div>
         <div id="Posters" class="col">
           <div class="card border-0 bg-transparent" style="width: 18rem">
-            <a href="/Src/Products/UnPoDiBlu.html"
+            <a href="/product/SundayMorning"
               ><img
-                src="../Images/Un Po' Di Blu No2 Plakat.png"
+                src="<%= SundayMorning.img %>"
                 class="card-img-top"
                 alt="..."
             /></a>
             <div class="card-body">
               <h6 class="card-title my-0">
-                <a href="/Src/Products/ProductPage.html" id="link-text">Hmmm</a>
+                <a href="/product/SundayMorning" id="link-text"><%= SundayMorning.artist %></a>
               </h6>
               <p class="card-text">
-                <a href="/Src/Products/ProductPage.html" id="link-text"
-                  >Un Po' Di Blu</a
+                <a href="/product/SundayMorning" id="link-text"
+                  ><%= SundayMorning.title %></a
                 >
               </p>
               <p class="card-text">
-                <a href="/Src/Products/ProductPage.html" id="price-text"
-                  >300,00 kr</a
+                <a href="/product/SundayMorning" id="price-text"
+                  ><%= SundayMorning.price %>,00 kr</a
                 >
               </p>
             </div>
