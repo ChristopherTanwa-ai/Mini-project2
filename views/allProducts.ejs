@@ -28,7 +28,7 @@
       </div>
 
       <div class="title">
-        <a id="all-products-text" href="/Src/allPosters.html">
+        <a id="all-products-text" href="/allPosters">
           <div>All Products</div>
         </a>
       </div>
@@ -100,179 +100,29 @@
                     >
                       <div class="accordion-body">
                         <div class="row ps-4">
-                          <div class="form-check mb-2">
-                            <input
-                              onclick="filterObjects('A.P.Atelier', 'Artist')"
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="artist1"
-                            />
-                            <label class="form-check-label" for="artist1">
-                              <p class="lead mx-0 my-0">A.P Atelier</p>
-                            </label>
+                            <% let addedArtists = []; %>
+                            <% Object.keys(Posters).forEach((key) => {
+                                const artist = Posters[key].artist;
+                                if (!addedArtists.includes(artist)) {
+                                    addedArtists.push(artist); %>
+                                    <div class="row ps-4">
+                                      <div class="form-check mb-2">
+                                        <input
+                                          onclick="filterObjects('<%= artist %>', 'Artist')"
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          value=""
+                                          id="<%= artist %>"
+                                        />
+                                        <label class="form-check-label" for="<%= artist %>">
+                                          <p class="lead mx-0 my-0"><%= artist %></p>
+                                        </label>
+                                      </div>
+                                    </div>
+                                <% } %>
+                            <% }); %>
+                            
                           </div>
-                        </div>
-
-                        <div class="row ps-4">
-                          <div class="form-check mb-2">
-                            <input
-                              onclick="filterObjects('Indigo', 'Artist')"
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="artist1"
-                            />
-                            <label class="form-check-label" for="artist1">
-                              <p class="lead mx-0 my-0">
-                                The Indigo Collection No2
-                              </p>
-                            </label>
-                          </div>
-                        </div>
-
-                        <div class="row ps-4">
-                          <div class="form-check mb-2">
-                            <input
-                              onclick="filterObjects('HilmaAfKlint', 'Artist')"
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="artist1"
-                            />
-                            <label class="form-check-label" for="artist1">
-                              <p class="lead mx-0 my-0">Hilma af Klint</p>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="row ps-4">
-                          <div class="form-check mb-2">
-                            <input
-                              onclick="filterObjects('JohnMiller', 'Artist')"
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="artist1"
-                            />
-                            <label class="form-check-label" for="artist1">
-                              <p class="lead mx-0 my-0">John Miller</p>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="row ps-4">
-                          <div class="form-check mb-2">
-                            <input
-                              onclick="filterObjects('Klorofyl', 'Artist')"
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="artist1"
-                            />
-                            <label class="form-check-label" for="artist1">
-                              <p class="lead mx-0 my-0">Klorofyl</p>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="row ps-4">
-                          <div class="form-check mb-2">
-                            <input
-                              onclick="filterObjects('MathooArt', 'Artist')"
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="artist1"
-                            />
-                            <label class="form-check-label" for="artist1">
-                              <p class="lead mx-0 my-0">MathooArt</p>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="row ps-4">
-                          <div class="form-check mb-2">
-                            <input
-                              onclick="filterObjects('Matisse', 'Artist')"
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="artist1"
-                            />
-                            <label class="form-check-label" for="artist1">
-                              <p class="lead mx-0 my-0">Matisse</p>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="row ps-4">
-                          <div class="form-check mb-2">
-                            <input
-                              onclick="filterObjects('Monet', 'Artist')"
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="artist2"
-                            />
-                            <label class="form-check-label" for="artist2">
-                              <p class="lead mx-0 my-0">Monet</p>
-                            </label>
-                          </div>
-                        </div>
-
-                        <div class="row ps-4">
-                          <div class="form-check mb-2">
-                            <input
-                              onclick="filterObjects('Picasso', 'Artist')"
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="artist3"
-                            />
-                            <label class="form-check-label" for="artist3">
-                              <p class="lead mx-0 my-0">Picasso</p>
-                            </label>
-                          </div>
-                        </div>
-
-                        <div class="row ps-4">
-                          <div class="form-check mb-2">
-                            <input
-                              onclick="filterObjects('Positano', 'Artist')"
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="artist1"
-                            />
-                            <label class="form-check-label" for="artist1">
-                              <p class="lead mx-0 my-0">Positano</p>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="row ps-4">
-                          <div class="form-check mb-2">
-                            <input
-                              onclick="filterObjects('Taisho', 'Artist')"
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="artist1"
-                            />
-                            <label class="form-check-label" for="artist1">
-                              <p class="lead mx-0 my-0">Taisho</p>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="row ps-4">
-                          <div class="form-check mb-2">
-                            <input
-                              onclick="filterObjects('WilliamMorris', 'Artist')"
-                              class="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="artist1"
-                            />
-                            <label class="form-check-label" for="artist1">
-                              <p class="lead mx-0 my-0">William Morris</p>
-                            </label>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -471,5 +321,8 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"
   ></script>
+  
+    <!--Added the new script below for the logic behind the filter-->
+    <script src="/Filter.js"></script>
   </body>
 </html>
