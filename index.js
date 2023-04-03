@@ -23,6 +23,10 @@ app.get('/product/:poster',(req,res) =>{
     res.render('product', {...artist,...mainData,rndPosters})
 })
 
+app.get('/allPosters', (req,res) =>{
+    res.render('allProducts',{...mainData});
+})
+
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
 
 function randomPosters(artist){

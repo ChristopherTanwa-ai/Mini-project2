@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+h3{
+  font-family: 'Gloock';
+}
+#sidenav-header{
+    font-family: Gloock ,Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: 1px solid black;
+    font-weight: 300 !important;
+}
+#sidenav{
+    background-color: #DFE7EC;
+    
+}
+
+#main-container{
+    min-height: 100vh;
+}
+
+.filterDiv{
+   display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.lead{
+    font-size: 0.9rem !important;
+}
+.display-4{
+    font-family: Gloock ,Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem !important;
+}
+
+@media screen and (max-width: 700px) {
+    .sidenav {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidenav a {float: left;}
+    div.content {margin-left: 0;}
+  }
+
+  @media screen and (max-width: 990px) {
+    #main-container {
+      min-height: auto;
+    }
+  }
+img{
+    width:100px;
+    height:400px;
+}
+
+@media screen and (max-width: 990px) {
+  .sidenav {
+    margin-top: 0% !important;
+  }
+}
