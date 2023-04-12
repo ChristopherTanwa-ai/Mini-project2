@@ -108,7 +108,7 @@
                                     <div class="row ps-4">
                                       <div class="form-check mb-2">
                                         <input
-                                          onclick="filterObjects('<%= artist %>', 'Artist')"
+                                          onclick="filterObjects('<%= artist.replace(/\s/g, '') %>', 'Artist')"
                                           class="form-check-input"
                                           type="checkbox"
                                           value=""
@@ -284,7 +284,10 @@
             
                 <!--Function that generate cards and fills it with everything in our data.json file-->
                 <% Object.keys(Posters).forEach((poster) => { %>
-                <div class="card border-0 bg-transparent" style="width: 18rem">
+              <div class="col filterDiv <%= Posters[poster].artist.replace(/\s/g, '') %> Impressionist A3"
+                id="Posters">
+               
+                <div class="card border-0 bg-transparent " style="width: 18rem">
                   <a href="/Product/<%= poster %>"
                     ><img
                       src="<%= Posters[poster].img %>"
@@ -309,6 +312,7 @@
                     </p>
                   </div>
                 </div>
+              </div>
                 <% }); %>
               </div>
             </div>
@@ -323,6 +327,98 @@
   ></script>
   
     <!--Added the new script below for the logic behind the filter-->
-    <script src="/Filter.js"></script>
+    <script>
+      var artists = [];
+var styles = [];
+var formats = [];
+
+function filterObjects(c, t) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  switch (t) {
+    case "Artist":
+      if (artists.indexOf(c) == -1) {
+        artists.push(c);
+      } else {
+        artists.splice(artists.indexOf(c), 1);
+      }
+      break;
+    case "Style":
+      if (styles.indexOf(c) == -1) {
+        styles.push(c);
+      } else {
+        styles.splice(styles.indexOf(c), 1);
+      }
+      break;
+    case "Format":
+      if (formats.indexOf(c) == -1) {
+        formats.push(c);
+      } else {
+        formats.splice(formats.indexOf(c), 1);
+      }
+      break;
+  }
+
+  for (i = 0; i < x.length; i++) {
+    removeClass(x[i], "hide");
+
+    var artistRemove = true;
+    var styleRemove = true;
+    var formatRemove = true;
+
+    if (artists.length === 0) {
+      artistRemove = false;
+    }
+    if (styles.length === 0) {
+      styleRemove = false;
+    }
+    if (formats.length === 0) {
+      formatRemove = false;
+    }
+
+    x[i].className.split(" ").forEach((element) => {
+      if (artists.includes(element)) {
+        artistRemove = false;
+      }
+    });
+    x[i].className.split(" ").forEach((element) => {
+      if (styles.includes(element)) {
+        styleRemove = false;
+      }
+    });
+    x[i].className.split(" ").forEach((element) => {
+      if (formats.includes(element)) {
+        formatRemove = false;
+      }
+    });
+
+    if (artistRemove || styleRemove || formatRemove) addClass(x[i], "hide");
+  }
+}
+
+function removeClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+function addClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+      </script>
   </body>
 </html>
