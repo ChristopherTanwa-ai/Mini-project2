@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/products.css">
-    <link rel="stylesheet" href="/css/style.css"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/products.css">
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <header class="nav">
   <div class="logo">
     <a href="/">
       <img src="https://www.svgrepo.com/show/59465/mona-lisa.svg" alt="logo">
     </a>
-    
+
   </div>
-  
+
   <div class="title">
     <a id="all-products-text" href="/allPosters">
-      <div   >
+      <div>
         All Products
-    </div>
+      </div>
     </a>
   </div>
 
- <!-- <div class="filterObjects monet impressionist a2"></div>-->
+  <!-- <div class="filterObjects monet impressionist a2"></div>-->
 
   <div class="information">
-      <div class="login">
-          <a href="#test2">
-              <div class="fill">
-                <a href="/Src/Login.html">
-                  <img src="https://www.svgrepo.com/show/497407/profile-circle.svg" alt="logo">
-                </a>
-              </div>    
+    <div class="login">
+      <a href="#test2">
+        <div class="fill">
+          <a href="/Src/Login.html">
+            <img src="https://www.svgrepo.com/show/497407/profile-circle.svg" alt="logo">
           </a>
-      </div>
-      <div class="basket">
-          <div class="fill">
-            <a href="/Src/Basket.html">
-              <img src="https://www.svgrepo.com/show/477196/basket-free-material.svg" alt="logo">
+        </div>
+      </a>
+    </div>
+    <div class="basket">
+      <div class="fill">
+        <a href="/Src/Basket.html">
+          <img src="https://www.svgrepo.com/show/477196/basket-free-material.svg" alt="logo">
 
-            </a>
-          </div>
+        </a>
       </div>
+    </div>
   </div>
 </header>
 
@@ -52,23 +55,24 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col" id="prodimgcol">
-        <img
-          src="<%= img %>"
-          class="img-fluid rounded mx-auto d-block"
-          id="prodimg"
-          alt=""
-        />
+        <img src="<%= img %>" class="img-fluid rounded mx-auto d-block" id="prodimg" alt="" />
       </div>
       <div class="col mx-auto my-auto">
-        <h2 id="prodheader"><%= artist %></h2>
-        <h5 id="prodheader"><%= title %></h5>
-        <h6 id="price"><%= price %>,00kr</h6>
+        <h2 id="prodheader">
+          <%= artist %>
+        </h2>
+        <h5 id="prodheader">
+          <%= title %>
+        </h5>
+        <h6 id="price">
+          <%= price %>,00kr
+        </h6>
         <div id="prodtext" class="text-body">
           <p>
             <%= description %>
           </p>
         </div>
-        <button type="button" class="btn btn-outline-primary" id="buy" onclick = "addToCart('<%= artist %>')">
+        <button type="button" class="btn btn-outline-primary" id="buy" onclick="addToCart()">
           Add to cart
         </button>
       </div>
@@ -83,107 +87,110 @@
     <div class="row justify-content-center ">
       <div id="Posters" class="col">
         <div class="card border-0 bg-transparent" style="width: 18rem">
-          <a href="/product/<%= rndPosters[1].id %>"
-            ><img
-              src="<%= rndPosters[1].img %>"
-              class="card-img-top"
-              alt="..."
-          /></a>
+          <a href="/product/<%= rndPosters[1].id %>"><img src="<%= rndPosters[1].img %>" class="card-img-top"
+              alt="..." /></a>
           <div class="card-body bg-transparent">
             <h6 class="card-title my-0">
-              <a href="/product/<%= rndPosters[1].id %>" id="link-text"
-                ><%= rndPosters[1].artist %></a
-              >
+              <a href="/product/<%= rndPosters[1].id %>" id="link-text">
+                <%= rndPosters[1].artist %>
+              </a>
             </h6>
             <p class="card-text">
-              <a href="/product/<%= rndPosters[1].id %>" id="link-text"
-                ><%= rndPosters[1].title %></a
-              >
+              <a href="/product/<%= rndPosters[1].id %>" id="link-text">
+                <%= rndPosters[1].title %>
+              </a>
             </p>
             <p class="card-text">
-              <a href="/product/<%= rndPosters[1].id %>" id="price-text"><%= rndPosters[1].price %>,00 kr</a>
+              <a href="/product/<%= rndPosters[1].id %>" id="price-text">
+                <%= rndPosters[1].price %>,00 kr
+              </a>
             </p>
           </div>
         </div>
       </div>
       <div id="Posters" class="col">
         <div class="card border-0 bg-transparent" style="width: 18rem">
-          <a href="/product/<%= rndPosters[2].id %>"
-            ><img
-              src="<%= rndPosters[2].img %>"
-              class="card-img-top"
-              alt="..."
-          /></a>
+          <a href="/product/<%= rndPosters[2].id %>"><img src="<%= rndPosters[2].img %>" class="card-img-top"
+              alt="..." /></a>
           <div class="card-body bg-transparent">
             <h6 class="card-title my-0">
-              <a href="/product/<%= rndPosters[2].id %>" id="link-text"><%= rndPosters[2].artist %></a>
+              <a href="/product/<%= rndPosters[2].id %>" id="link-text">
+                <%= rndPosters[2].artist %>
+              </a>
             </h6>
             <p class="card-text">
-              <a href="/product/<%= rndPosters[2].id %>" id="link-text"><%= rndPosters[2].title %></a>
+              <a href="/product/<%= rndPosters[2].id %>" id="link-text">
+                <%= rndPosters[2].title %>
+              </a>
             </p>
-            <p class="card-text"><a href="" id="price-text"><%= rndPosters[2].price%>,00 kr</a></p>
+            <p class="card-text"><a href="" id="price-text">
+                <%= rndPosters[2].price%>,00 kr
+              </a></p>
           </div>
         </div>
       </div>
       <div id="Posters" class="col">
         <div class="card border-0 bg-transparent" style="width: 18rem">
-          <a href="<%= rndPosters[3].id %>"
-            ><img
-              src="<%= rndPosters[3].img %>"
-              class="card-img-top"
-              alt="..."
-          /></a>
+          <a href="<%= rndPosters[3].id %>"><img src="<%= rndPosters[3].img %>" class="card-img-top" alt="..." /></a>
           <div class="card-body">
             <h6 class="card-title my-0">
-              <a href="<%= rndPosters[3].id %>" id="link-text"><%= rndPosters[3].artist %></a>
+              <a href="<%= rndPosters[3].id %>" id="link-text">
+                <%= rndPosters[3].artist %>
+              </a>
             </h6>
             <p class="card-text">
-              <a href="<%= rndPosters[3].id %>" id="link-text"
-                ><%= rndPosters[3].title %></a
-              >
+              <a href="<%= rndPosters[3].id %>" id="link-text">
+                <%= rndPosters[3].title %>
+              </a>
             </p>
             <p class="card-text">
-              <a href="<%= rndPosters[3].id %>" id="price-text"><%= rndPosters[3].price %>,00 kr</a>
+              <a href="<%= rndPosters[3].id %>" id="price-text">
+                <%= rndPosters[3].price %>,00 kr
+              </a>
             </p>
           </div>
         </div>
       </div>
       <div id="Posters" class="col">
         <div class="card border-0 bg-transparent" style="width: 18rem">
-          <a href="<%= rndPosters[0].id %>"
-            ><img
-              src="<%= rndPosters[0].img %>"
-              class="card-img-top"
-              alt="..."
-          /></a>
+          <a href="<%= rndPosters[0].id %>"><img src="<%= rndPosters[0].img %>" class="card-img-top" alt="..." /></a>
           <div class="card-body">
             <h6 class="card-title my-0">
-              <a href="<%= rndPosters[0].id %>" id="link-text"><%= rndPosters[0].artist %></a>
+              <a href="<%= rndPosters[0].id %>" id="link-text">
+                <%= rndPosters[0].artist %>
+              </a>
             </h6>
             <p class="card-text">
-              <a href="<%= rndPosters[0].id %>" id="link-text"><%= rndPosters[0].title %></a>
+              <a href="<%= rndPosters[0].id %>" id="link-text">
+                <%= rndPosters[0].title %>
+              </a>
             </p>
             <p class="card-text">
-              <a href="<%= rndPosters[0].id %>" id="price-text"><%= rndPosters[0].price %>,00 kr</a>
+              <a href="<%= rndPosters[0].id %>" id="price-text">
+                <%= rndPosters[0].price %>,00 kr
+              </a>
             </p>
           </div>
         </div>
       </div>
-    </div> 
+    </div>
   </div>
-  <script>
-  function addToCart(input) {
-    const posters = mainData.Posters;
-    let index = posters.findIndex(poster => poster.artist === input);
-    let foundUser = users.find(data => session.userid === data.Username);
-    if (index !== -1) {
-      const poster = posters[index];
-      foundUser.basket.push(poster);
-      console.log('User list', users);
-    } else {
-      console.log(`Could not find poster by artist ${input}`);
-    }
-  }
-</script>
+    <script>
+      var getTest = "<%= artist  %>";
+      function addToCart() {
+        console.log('woop')
+        const posters = mainData.Posters;
+        let index = posters.findIndex(poster => poster.artist === getTest);
+        let foundUser = users.find(data => session.userid === data.Username);
+        if (index !== -1) {
+          const poster = posters[index];
+          foundUser.basket.push(poster);
+          console.log('User list', users);
+        } else {
+          console.log(`Could not find poster by artist ${getTest}`);
+        }
+      }
+    </script>
 </body>
+
 </html>

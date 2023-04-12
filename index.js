@@ -147,7 +147,7 @@ function addName() {
     }
 }
 
-function addToCart(input) {
+/*function addToCart(input) {
     const posters = mainData.Posters;
     let index = posters.findIndex(poster => poster.artist === input);
     let foundUser = users.find(data => session.userid === data.Username);
@@ -158,7 +158,7 @@ function addToCart(input) {
     } else {
       console.log(`Could not find poster by artist ${input}`);
     }
-  }
+  }*/
 
 
 function deleteToCart(input) {
