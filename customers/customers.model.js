@@ -1,5 +1,8 @@
 import * as fs from "fs/promises";
+import path from 'path';
 const CUSTOMERS_FILE = "./customers.json";
+const dataFilePath = path.join(__dirname, 'data.json');
+
 
 // return all customer from file
 export async function getAll() {
@@ -64,7 +67,6 @@ export async function update(customerId, customer) {
 
 export async function addToBasket(customerId, posterId) {
   try {
-    const dataFilePath = path.join(__dirname, 'data.json');
     const data = await fs.readFile(dataFilePath, 'utf-8');
     const jsonData = JSON.parse(data);
     const customer = jsonData.customers.find(c => c.id === customerId);
@@ -80,7 +82,39 @@ export async function addToBasket(customerId, posterId) {
   }
 }
 
+export async function removeFromBasket(customerId, posterId) {
+  try {
+    const data = await fs.readFile(dataFilePath, 'utf-8');
+    const jsonData = JSON.parse(data);
+    const customer = jsonData.customers.find(c => c.id === customerId);
+    if (!customer) {
+      throw new Error('Invalid customer id');
+    }
+    const posterIndex = customer.basket.findIndex(p => p.id === posterId);
+    if (posterIndex === -1) {
+      throw new Error('Poster not found in customer basket');
+    }
+    customer.basket.splice(posterIndex, 1);
+    await fs.writeFile(dataFilePath, JSON.stringify(jsonData));
+    return customer;
+  } catch (error) {
+    console.error(error);
+  }
+}
 
+export async function getBasket(customerId) {
+  try {
+    const data = await fs.readFile(dataFilePath, 'utf-8');
+    const jsonData = JSON.parse(data);
+    const customer = jsonData.customers.find(c => c.id === customerId);
+    if (!customer) {
+      throw new Error('Invalid customer id');
+    }
+    return customer.basket;
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 // delete existing customer
 export async function remove(customerId) {

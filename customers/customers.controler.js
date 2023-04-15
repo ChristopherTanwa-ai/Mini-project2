@@ -53,3 +53,45 @@ export async function postCustomer(req, res) {
       res.status(400).send(error.message);
     }
   }
+
+  export async function addToBasket(req, res) {
+    try {
+      const customerId = req.params.customerId;
+      const posterId = req.params.posterId;
+      const customer = await customerModel.addToBasket(customerId, posterId);
+      res.json(customer);
+    } catch (error) {
+      res.status(400).send(error.message);
+    }
+  }
+
+  export async function getBasket(req, res) {
+    try {
+      const customerId = req.params.customerId;
+      const basket = await getBasket(customerId);
+      res.json(basket);
+    } catch (error) {
+      res.status(400).send(error.message);
+    }
+  }
+
+  export async function removeFromBasket(req, res) {
+    try {
+      const customerId = parseInt(req.params.customerId);
+      const posterId = req.params.posterId;
+      const customer = await customerModel.getByID(customerId);
+      if (!customer) {
+        throw new Error('Customer not found');
+      }
+      const posterIndex = customer.basket.findIndex(p => p.id === posterId);
+      if (posterIndex === -1) {
+        throw new Error('Poster not found in basket');
+      }
+      customer.basket.splice(posterIndex, 1);
+      await customerModel.update(customerId, customer);
+      res.json(customer.basket);
+    } catch (error) {
+      res.status(400).send(error.message);
+    }
+  }
+
