@@ -1,7 +1,7 @@
 import * as fs from "fs/promises";
 import path from 'path';
 const CUSTOMERS_FILE = "./customers.json";
-const dataFilePath = path.join(new URL('data.json', import.meta.url).pathname);
+const dataFilePath = path.join(new URL('./data.json', import.meta.url).pathname);
 
 // return all customer from file
 export async function getAll() {
@@ -68,14 +68,19 @@ export async function addToBasket(customerId, posterId) {
   try {
     const data = await fs.readFile(dataFilePath, 'utf-8');
     const jsonData = JSON.parse(data);
-    const customer = jsonData.customers.find(c => c.id === customerId);
-    const poster = jsonData.Posters[posterId];
+    const posters = jsonData.Posters;
+    const posterKeys = Object.keys(posters);
+    const posterkey = posterKeys[posterId];
+    let poster = posters[posterkey]
+    let customerArray = await getAll();
+    let index = findCustomer(customerArray, customerId);
+    let customer = customerArray[index];
     if (!customer || !poster) {
       throw new Error('Invalid customer or poster id');
     }
-    customer.basket.push(poster);
-    await fs.writeFile(dataFilePath, JSON.stringify(jsonData));
-    return customer;
+    customer.Basket.push(poster);
+    customerArray[index] = customer;
+    await save(customerArray);
   } catch (error) {
     console.error(error);
   }
@@ -85,35 +90,38 @@ export async function removeFromBasket(customerId, posterId) {
   try {
     const data = await fs.readFile(dataFilePath, 'utf-8');
     const jsonData = JSON.parse(data);
-    const customer = jsonData.customers.find(c => c.id === customerId);
-    if (!customer) {
-      throw new Error('Invalid customer id');
-    }
-    const posterIndex = customer.basket.findIndex(p => p.id === posterId);
-    if (posterIndex === -1) {
-      throw new Error('Poster not found in customer basket');
-    }
-    customer.basket.splice(posterIndex, 1);
-    await fs.writeFile(dataFilePath, JSON.stringify(jsonData));
-    return customer;
-  } catch (error) {
-    console.error(error);
+    const posters = jsonData.Posters;
+    const posterKeys = Object.keys(posters);
+    const posterkey = posterKeys[posterId];
+    let poster = posters[posterkey];
+    console.log(poster);
+    let customerArray = await getAll();
+    let index = findCustomer(customerArray, customerId);
+    let customer = customerArray[index];
+    let posterIndex = customer.Basket[poster];
+    console.log(posterIndex);
+    console.log(customer.Basket);
+    customer.Basket.splice(posterIndex, 1);
+    console.log(customer.Basket);
+    customerArray[index] = customer;
+    await save(customerArray);
   }
-}
+    catch (error) {
+      console.error(error);
+    }
+  } 
+
 
 export async function getBasket(customerId) {
-  try {
-    const data = await fs.readFile(dataFilePath, 'utf-8');
-    const jsonData = JSON.parse(data);
-    const customer = jsonData.customers.find(c => c.id === customerId);
-    if (!customer) {
-      throw new Error('Invalid customer id');
-    }
-    return customer.basket;
-  } catch (error) {
-    console.error(error);
-  }
+  let customerArray = await getAll();
+  let index = findCustomer(customerArray, customerId);
+  if (index === -1)
+    throw new Error(`Customer with ID:${customerId} doesn't exist`);
+  else {
+  let customer = customerArray[index];
+  return customer.basket;}
 }
+
 
 // delete existing customer
 export async function remove(customerId) {

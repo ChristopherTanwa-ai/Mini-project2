@@ -18,8 +18,8 @@ customerRouter.put("/customers/:id",putCustomer );
 
 customerRouter.delete("/customers/:id", deleteCustomer);
 
-customerRouter.post('/:customerId/basket/:posterId', addToBasket);
+customerRouter.put('/customers/:customerId/basket/:posterId', addToBasket);
 
-customerRouter.delete('/:customerId/basket/:posterId', removeFromBasket);
+customerRouter.put('/customers/:customerId/basket2/:posterId', removeFromBasket);
 
-customerRouter.get('/:customerId/basket', getBasket);
+customerRouter.get('/customers/:customerId/basket', getBasket);
