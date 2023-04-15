@@ -1,5 +1,5 @@
 import * as fs from "fs/promises";
-const CUSTOMERS_FILE = "customers/customers.json";
+const CUSTOMERS_FILE = "./customers.json";
 
 // return all customer from file
 export async function getAll() {
@@ -61,6 +61,26 @@ export async function update(customerId, customer) {
     await save(customerArray);
   }
 }
+
+export async function addToBasket(customerId, posterId) {
+  try {
+    const dataFilePath = path.join(__dirname, 'data.json');
+    const data = await fs.readFile(dataFilePath, 'utf-8');
+    const jsonData = JSON.parse(data);
+    const customer = jsonData.customers.find(c => c.id === customerId);
+    const poster = jsonData.Posters[posterId];
+    if (!customer || !poster) {
+      throw new Error('Invalid customer or poster id');
+    }
+    customer.basket.push(poster);
+    await fs.writeFile(dataFilePath, JSON.stringify(jsonData));
+    return customer;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+
 
 // delete existing customer
 export async function remove(customerId) {

@@ -1,4 +1,4 @@
-import * as customerModel from "customers/customers.model.js";
+import * as customerModel from "./customers.model.js";
 
 export async function getAllCustomers(req, res) {
     try {

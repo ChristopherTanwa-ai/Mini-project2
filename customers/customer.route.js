@@ -1,6 +1,6 @@
 // index.js
 import express from 'express'
-import {getAllCustomers, postCustomer, getCustomer,putCustomer, deleteCustomer } from 'customers/customers.controler.js'
+import {getAllCustomers, postCustomer, getCustomer,putCustomer, deleteCustomer } from './customers.controler.js'
 
 export const customerRouter = express.Router();
 
