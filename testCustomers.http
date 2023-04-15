@@ -8,7 +8,7 @@ GET http://localhost:3000/customers HTTP/1.1
 POST http://localhost:3000/customers HTTP/1.1
 content-type: application/json
 
-{"customerId":11,"customerName":"Poop", "Basket": []}
+{"customerId":19,"customerName":"Jakob", "Basket": []}
 ###
 
 // get customer by id
@@ -34,3 +34,20 @@ content-type: application/json
 
 {"customerId":15, "customerName": "Jameson UPDATED!", "Basket": []}
 ###
+
+
+// Add item to customer's basket
+POST http://localhost:3000/customers/19/basket HTTP/1.1
+Content-Type: application/json
+
+{
+  "posterId": 1
+}
+###
+
+// Remove item from customer's basket
+DELETE http://localhost:3000/customers/11/basket/1 HTTP/1.1
+###
+
+// Get customer's basket
+GET http://localhost:3000/customers/11/basket HTTP/1.1

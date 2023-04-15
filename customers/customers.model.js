@@ -1,8 +1,7 @@
 import * as fs from "fs/promises";
 import path from 'path';
 const CUSTOMERS_FILE = "./customers.json";
-const dataFilePath = path.join(__dirname, 'data.json');
-
+const dataFilePath = path.join(new URL('data.json', import.meta.url).pathname);
 
 // return all customer from file
 export async function getAll() {

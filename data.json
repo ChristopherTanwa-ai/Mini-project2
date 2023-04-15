@@ -1,6 +1,7 @@
 {
     "Posters": {
         "HilmaChildhood": {
+            "posterId": 1,
             "artist": "Hilma af Klint",
             "title": "The Ten Largest Childhood",
             "price": 250,
@@ -8,6 +9,7 @@
             "img": "/images/Hilma af Klint - The Ten Largest Childhood No. 2 Plakat.png"
         },
         "SelfPortrait": {
+            "posterId": 2,
             "artist": "Klorofyl",
             "title": "Self-Portrait",
             "price": 255,
@@ -15,6 +17,7 @@
             "img": "/images/Klorofyl.png"
         },
         "ArtistGarden": {
+            "posterId": 3,
             "artist": "Claude Monet",
             "title": "The Artist's Aarden at Vétheuil",
             "price": 200,
@@ -22,6 +25,7 @@
             "img": "/images/Monet - The Artist's Garden at Vetheuil Plakat.png"
         },
         "SundayMorning": {
+            "posterId": 4,
             "artist": "Taisho",
             "title": "Sunday Morning",
             "price": 230,
@@ -29,6 +33,7 @@
             "img": "/images/TaishoSundayMorning.png"
         },  
         "AlberoDeLimone": {
+            "posterId": 5,
             "artist": "Positano",
             "title": "Albero Di Limone",
             "price": 200,
@@ -36,6 +41,7 @@
             "img": "/images/AlberoDeLimone.jpg.webp"
         },
         "Peacock": {
+            "posterId": 6,
             "artist": "A.P Atelier",
             "title": "Peacock",
             "price": 300,
@@ -43,6 +49,7 @@
             "img": "/images/APpeacock.png"
         },
         "ArtexhibitionIII": {
+            "posterId": 7,
             "artist": "Hilma af Klint",
             "title": "Art exhibition III",
             "price": 250,
@@ -50,6 +57,7 @@
             "img": "/images/HilmaArtExhibition.png"
         },
         "SummerEstuary": {
+            "posterId": 8,
             "artist": "John Miller",
             "title": "Summer Estuary",
             "price": 150,
@@ -57,6 +65,7 @@
             "img": "/images/JohnMillerSummer.png"
         },
         "How_can_I_have_enough_of_life_and_love": {
+            "posterId": 9,
             "artist": "William Morris",
             "title": "How can I have enough of life and love?",
             "price": 150,
@@ -64,6 +73,7 @@
             "img": "/images/LifeandLove.jpg"
         },
         "Simply_Living_x_The_Breakfast": {
+            "posterId": 10,
             "artist": "MaThoo Art",
             "title": "Simply Living x The Breakfast",
             "price": 250,
@@ -71,6 +81,7 @@
             "img": "/images/MaThooArtSimply.png"
         },
         "Berggruen_Cie": {
+            "posterId": 11,
             "artist": "Henri Matisse",
             "title": "Berggruen & Cie",
             "price": 250,
@@ -78,6 +89,7 @@
             "img": "/images/Berggruen&cie.jpg"
         },
         "Paix": {
+            "posterId": 12,
             "artist": "Pablo Picasso",
             "title": "Paix",
             "price": 150,
@@ -85,6 +97,7 @@
             "img": "/images/Screenshot 2023-03-06 at 12-24-15 Et La Paix exhibition poster - Picasso.png"
         },
         "Portrait_de_Marie-Therese_Walter": {
+            "posterId": 13,
             "artist": "Pablo Picasso",
             "title": "Portrait de Marie-Therese Walter",
             "price": 300,
@@ -92,6 +105,7 @@
             "img": "/images/PortraitdeMarie-ThereseWalter.png"
         },
         "Udon": {
+            "posterId": 14,
             "artist": "Taisho",
             "title": "Udon",
             "price": 230,
@@ -99,6 +113,7 @@
             "img": "/images/TaishoUdon.png"
         },
         "UnPoDiBlu": {
+            "posterId": 15,
             "artist": "The indigo collection No2",
             "title": "Un Po' Di Blu",
             "price": 300,
@@ -106,6 +121,7 @@
             "img": "/images/Un Po' Di Blu No2 Plakat.png"
         },
         "FullOfSun":{
+            "posterId": 16,
             "artist": "Elise Esposito",
             "title": "Full Of Sun",
             "price": 900,
