@@ -1,9 +1,19 @@
+import express from 'express';
+import { data } from 'jquery';
+import path from 'path';
+const app = express();
+import mainData from './data.json';
+import {customerRouter} from "customers/customer.route.js";
 
-const express = require('express');
+/*const express = require('express');
 const { data } = require('jquery');
 const path = require('path');
 const app = express();
 const mainData = require('./data.json');
+const {customerRouter} = require("customers/customer.route.js");*/
+
+app.use(express.json());
+app.use(customerRouter)
 
 app.use(express.static(path.join(__dirname,'public')))
 app.set('view engine', 'ejs')
