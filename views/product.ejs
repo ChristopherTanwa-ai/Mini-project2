@@ -176,19 +176,13 @@
     </div>
   </div>
     <script>
-      var getTest = "<%= artist  %>";
       function addToCart() {
         console.log('woop')
-        const posters = mainData.Posters;
-        let index = posters.findIndex(poster => poster.artist === getTest);
+        let posters = mainData.Posters;
+        const poster = posters.find(poster => poster.title === '<%= title%>')
         let foundUser = users.find(data => session.userid === data.Username);
-        if (index !== -1) {
-          const poster = posters[index];
-          foundUser.basket.push(poster);
-          console.log('User list', users);
-        } else {
-          console.log(`Could not find poster by artist ${getTest}`);
-        }
+        foundUser.basket.push(poster);
+        console.log('User list', users);
       }
     </script>
 </body>

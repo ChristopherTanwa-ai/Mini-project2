@@ -147,20 +147,6 @@ function addName() {
     }
 }
 
-/*function addToCart(input) {
-    const posters = mainData.Posters;
-    let index = posters.findIndex(poster => poster.artist === input);
-    let foundUser = users.find(data => session.userid === data.Username);
-    if (index !== -1) {
-      const poster = posters[index];
-      foundUser.basket.push(poster);
-      console.log('User list', users);
-    } else {
-      console.log(`Could not find poster by artist ${input}`);
-    }
-  }*/
-
-
 function deleteToCart(input) {
     let foundUser = users.find((data) => session.userid === data.Username);
     foundUser.basket.indexOf(input)
