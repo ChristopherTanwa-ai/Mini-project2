@@ -3,7 +3,7 @@ GET http://localhost:3000/ HTTP/1.1
 ###
 
 
-GET http://localhost:3000/product/ HTTP/1.1
+GET http://localhost:3000/product/u HTTP/1.1
 
 ###
 GET http://localhost:3000/Data HTTP/1.1
@@ -13,4 +13,7 @@ GET http://localhost:3000/Data HTTP/1.1
 GET http://localhost:3000/Data/FullOfSun HTTP/1.1
 
 ###
-GET http://localhost:3000/Data/FullOfSun/description HTTP/1.1
+GET http://localhost:3000/Data/FullOffSon HTTP/1.1
+
+###
+GET http://localhost:3000/Data/FullOfSun/desiption HTTP/1.1
