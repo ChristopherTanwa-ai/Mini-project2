@@ -12,7 +12,7 @@ export async function getAll() {
   } catch (err) {
     if (err.code === "ENOENT") {
       // file does not exits
-      await save([]); // create a new file with ampty array
+      await save([]); // create a new file with empty array
       return []; // return empty array
     } // // cannot handle this exception, so rethrow
     else throw err;
