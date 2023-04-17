@@ -69,6 +69,7 @@ export async function postCustomer(req, res) {
     try {
       const customerId = parseInt(req.params.customerId);
       const basket = await customerModel.getBasket(customerId);
+      console.log(basket)
       res.json(basket);
     } catch (error) {
       res.status(400).send(error.message);

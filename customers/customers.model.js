@@ -1,7 +1,7 @@
 import * as fs from "fs/promises";
 import path from 'path';
-const CUSTOMERS_FILE = "./data.json";
-const dataFilePath = path.join(new URL("./data.json", import.meta.url).pathname);
+const CUSTOMERS_FILE = "./customers.json";
+const dataFilePath = path.join(new URL('./data.json', import.meta.url).pathname);
 
 // return all customer from file
 export async function getAll() {
@@ -110,6 +110,7 @@ export async function removeFromBasket(customerId, posterId) {
     }
   } 
 
+
 export async function getBasket(customerId) {
   let customerArray = await getAll();
   let index = findCustomer(customerArray, customerId);
@@ -117,7 +118,9 @@ export async function getBasket(customerId) {
     throw new Error(`Customer with ID:${customerId} doesn't exist`);
   else {
   let customer = customerArray[index];
-  return customer.basket;}
+  console.log(customer)
+  console.log(customer.Basket)
+  return customer.Basket;}
 }
 
 
