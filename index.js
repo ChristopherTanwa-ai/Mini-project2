@@ -1,15 +1,18 @@
-
-const express = require('express');
-const { data } = require('jquery');
-const path = require('path');
+import express from 'express';
+import $ from 'jquery';
+import path from 'path';
 const app = express();
-const mainData = require('./data.json');
+import mainData from './data.json' assert { type: "json" };
+import {customerRouter} from "./customers/customer.route.js";
 
-app.use(express.static(path.join(__dirname,'public')))
+app.use(express.json());
+app.use(customerRouter)
+
+app.use(express.static(path.join(new URL('.', import.meta.url).pathname,'public')))
 app.set('view engine', 'ejs')
-app.set('views',path.join(__dirname,'/views'))
+app.set('views',path.join(new URL('.', import.meta.url).pathname,'/views'))
 //added to use the expose public folder 
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(new URL('.', import.meta.url).pathname + '/public'))
 
 app.get('/',(req,res) => {
     const rndPosters = randomPosters();
