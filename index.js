@@ -30,24 +30,6 @@ app.get('/allPosters', (req,res) =>{
     res.render('allProducts',{...mainData});
 })
 
-// Path that responds with all poster data
-app.get('/Data',(req,res) => {
-    res.send(mainData)
-})
-
-// Path to get a specific poster
-app.get('/Data/:Poster',(req,res) =>{
-    const poster = req.params.Poster;
-    res.send(mainData.Posters[poster]);
-})
-//Path to get information about a specific poster
-app.get('/Data/:Poster/:info',(req,res) =>{
-    const poster = req.params.Poster;
-    const info = req.params.info;
-    const detail = getDetail(poster, info)
-    res.send(detail);
-})
-
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
 
 function randomPosters(artist){
@@ -66,20 +48,4 @@ function randomPosters(artist){
     }
     }
     return selectedPosters;
-}
-
-function getDetail(Poster, info){
-    const infoLower = info.toLowerCase();
-    switch(infoLower){
-        case 'price':
-            return "Price of " + Poster +" is:"+ mainData.Posters[Poster].price +"kr";
-        case 'artist':
-            return JSON.stringify(mainData.Posters[Poster].artist);
-        case 'description':
-            return JSON.stringify(mainData.Posters[Poster].description);
-        case 'img':
-            return mainData.Posters[Poster].img;
-        default:
-            return "Fail";
-    }
 }
