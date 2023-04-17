@@ -1,7 +1,7 @@
 import * as fs from "fs/promises";
 import path from 'path';
-const CUSTOMERS_FILE = "./customers.json";
-const dataFilePath = path.join(new URL('./data.json', import.meta.url).pathname);
+const CUSTOMERS_FILE = "./data.json";
+const dataFilePath = path.join(new URL("./data.json", import.meta.url).pathname);
 
 // return all customer from file
 export async function getAll() {
@@ -109,7 +109,6 @@ export async function removeFromBasket(customerId, posterId) {
       console.error(error);
     }
   } 
-
 
 export async function getBasket(customerId) {
   let customerArray = await getAll();
