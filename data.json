@@ -1,17 +1,13 @@
 {
     "Posters": {
         "HilmaChildhood": {
-            "posterId": 0,
             "artist": "Hilma af Klint",
             "title": "The Ten Largest Childhood",
             "price": 250,
             "description": "Hilma af Klint's artistic talents showed early, as did her interest in spiritualism and philosophy. In recent years, her art has become more relevant than ever. Hilma af Klint's sense of shapes and colors in her distinctive art style is like a connection between the invisible spirit world and the visible, real one we live in. Big, bold shapes and fantastic color combinations make her artwork appeal to so many. ",
-            "img": "/images/Hilma af Klint - The Ten Largest Childhood No. 2 Plakat.png",
-            "style" : "Abstract"
-            
+            "img": "/images/Hilma af Klint - The Ten Largest Childhood No. 2 Plakat.png"
         },
         "SelfPortrait": {
-            "posterId": 1,
             "artist": "Klorofyl",
             "title": "Self-Portrait",
             "price": 255,
@@ -19,7 +15,6 @@
             "img": "/images/Klorofyl.png"
         },
         "ArtistGarden": {
-            "posterId": 2,
             "artist": "Claude Monet",
             "title": "The Artist's Aarden at Vétheuil",
             "price": 200,
@@ -27,7 +22,6 @@
             "img": "/images/Monet - The Artist's Garden at Vetheuil Plakat.png"
         },
         "SundayMorning": {
-            "posterId": 3,
             "artist": "Taisho",
             "title": "Sunday Morning",
             "price": 230,
@@ -35,16 +29,13 @@
             "img": "/images/TaishoSundayMorning.png"
         },  
         "AlberoDeLimone": {
-            "posterId": 4,
             "artist": "Positano",
             "title": "Albero Di Limone",
             "price": 200,
             "description": "Positano is a fishing village and one of the most famous places on the Amalfi Coast. The Amalfi Coast is famous for its gorgeous nature. With it's bright and beautiful colors this print of lemons will brighten up any space, whether it's a kitchen or any other room in the house. ",
-            "img": "/images/AlberoDeLimone.jpg.webp",
-            "style" : "Abstract"
+            "img": "/images/AlberoDeLimone.jpg.webp"
         },
         "Peacock": {
-            "posterId": 5,
             "artist": "A.P Atelier",
             "title": "Peacock",
             "price": 300,
@@ -52,7 +43,6 @@
             "img": "/images/APpeacock.png"
         },
         "ArtexhibitionIII": {
-            "posterId": 6,
             "artist": "Hilma af Klint",
             "title": "Art exhibition III",
             "price": 250,
@@ -60,7 +50,6 @@
             "img": "/images/HilmaArtExhibition.png"
         },
         "SummerEstuary": {
-            "posterId": 7,
             "artist": "John Miller",
             "title": "Summer Estuary",
             "price": 150,
@@ -68,16 +57,13 @@
             "img": "/images/JohnMillerSummer.png"
         },
         "How_can_I_have_enough_of_life_and_love": {
-            "posterId": 8,
             "artist": "William Morris",
             "title": "How can I have enough of life and love?",
             "price": 150,
             "description": "In his own time William Morris was most widely known as the author of The Earthly Paradise and for his designs for wallpapers, textiles, and carpets. Since the mid-20th century Morris has been celebrated as a designer and craftsman. ",
-            "img": "/images/LifeandLove.jpg",
-            "style" : "Abstract"
+            "img": "/images/LifeandLove.jpg"
         },
         "Simply_Living_x_The_Breakfast": {
-            "posterId": 9,
             "artist": "MaThoo Art",
             "title": "Simply Living x The Breakfast",
             "price": 250,
@@ -85,16 +71,13 @@
             "img": "/images/MaThooArtSimply.png"
         },
         "Berggruen_Cie": {
-            "posterId": 10,
             "artist": "Henri Matisse",
             "title": "Berggruen & Cie",
             "price": 250,
             "description": "\"Berggruen & Cie\" is a beautiful poster inspired by the lively and colorful carvings of the famous artist, Henri Matisse. This poster shows a beautiful paper cut with a dark blue leaf reminiscent of Matisse's unique style. With its captivating design, this poster is sure to add a touch of elegance to your home. Regardless of whether it hangs in the living room, bedroom or office, \"Berggruen & Cie\" is a must-have for any admirer of Matisse. ",
-            "img": "/images/Berggruen&cie.jpg",
-            "style" : "Abstract"
+            "img": "/images/Berggruen&cie.jpg"
         },
         "Paix": {
-            "posterId": 11,
             "artist": "Pablo Picasso",
             "title": "Paix",
             "price": 150,
@@ -102,7 +85,6 @@
             "img": "/images/Screenshot 2023-03-06 at 12-24-15 Et La Paix exhibition poster - Picasso.png"
         },
         "Portrait_de_Marie-Therese_Walter": {
-            "posterId": 12,
             "artist": "Pablo Picasso",
             "title": "Portrait de Marie-Therese Walter",
             "price": 300,
@@ -110,7 +92,6 @@
             "img": "/images/PortraitdeMarie-ThereseWalter.png"
         },
         "Udon": {
-            "posterId": 13,
             "artist": "Taisho",
             "title": "Udon",
             "price": 230,
@@ -118,7 +99,6 @@
             "img": "/images/TaishoUdon.png"
         },
         "UnPoDiBlu": {
-            "posterId": 14,
             "artist": "The indigo collection No2",
             "title": "Un Po' Di Blu",
             "price": 300,
@@ -126,16 +106,17 @@
             "img": "/images/Un Po' Di Blu No2 Plakat.png"
         },
         "FullOfSun":{
-            "posterId": 15,
             "artist": "Elise Esposito",
             "title": "Full Of Sun",
             "price": 900,
             "description": "Full Of Sun by Elise Esposito is a vibrant and lively poster that will bring warmth and happiness to any room. The bold yellow background is decorated with playful illustrations of flowers and leaves, creating a cheerful and inviting atmosphere. This poster is perfect for anyone who loves bright colors and positive vibes.",
             "img": "/images/Skærmbillede 2023-04-03 kl. 14.43.44.png"
         }
+        
+        
     },
 
     "HomePictures" :{
         "coverPhoto":"/images/Gw.jpg"
-    }
+    } 
 }
