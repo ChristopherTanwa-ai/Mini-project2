@@ -1,15 +1,18 @@
-
-const express = require('express');
-const { data } = require('jquery');
-const path = require('path');
+import express from 'express';
+import $ from 'jquery';
+import path from 'path';
 const app = express();
-const mainData = require('./data.json');
+import mainData from './data.json' assert { type: "json" };
+import {customerRouter} from "./customers/customer.route.js";
 
-app.use(express.static(path.join(__dirname,'public')))
+app.use(express.json());
+app.use(customerRouter)
+
+app.use(express.static(path.join(new URL('.', import.meta.url).pathname,'public')))
 app.set('view engine', 'ejs')
-app.set('views',path.join(__dirname,'/views'))
+app.set('views',path.join(new URL('.', import.meta.url).pathname,'/views'))
 //added to use the expose public folder 
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(new URL('.', import.meta.url).pathname + '/public'))
 
 app.get('/',(req,res) => {
     const rndPosters = randomPosters();
@@ -25,24 +28,6 @@ app.get('/product/:poster',(req,res) =>{
 
 app.get('/allPosters', (req,res) =>{
     res.render('allProducts',{...mainData});
-})
-
-// Path that responds with all poster data
-app.get('/Data',(req,res) => {
-    res.send(mainData)
-})
-
-// Path to get a specific poster
-app.get('/Data/:Poster',(req,res) =>{
-    const poster = req.params.Poster;
-    res.send(mainData.Posters[poster]);
-})
-//Path to get information about a specific poster
-app.get('/Data/:Poster/:info',(req,res) =>{
-    const poster = req.params.Poster;
-    const info = req.params.info;
-    const detail = getDetail(poster, info)
-    res.send(detail);
 })
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
@@ -80,3 +65,21 @@ function getDetail(Poster, info){
             return "Fail";
     }
 }
+
+// Path that responds with all poster data
+app.get('/Data',(req,res) => {
+    res.send(mainData)
+})
+
+// Path to get a specific poster
+app.get('/Data/:Poster',(req,res) =>{
+    const poster = req.params.Poster;
+    res.send(mainData.Posters[poster]);
+})
+//Path to get information about a specific poster
+app.get('/Data/:Poster/:info',(req,res) =>{
+    const poster = req.params.Poster;
+    const info = req.params.info;
+    const detail = getDetail(poster, info)
+    res.send(detail);
+})
