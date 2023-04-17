@@ -94,15 +94,14 @@ export async function removeFromBasket(customerId, posterId) {
     const posterKeys = Object.keys(posters);
     const posterkey = posterKeys[posterId];
     let poster = posters[posterkey];
-    console.log(poster);
     let customerArray = await getAll();
     let index = findCustomer(customerArray, customerId);
     let customer = customerArray[index];
     let posterIndex = customer.Basket[poster];
-    console.log(posterIndex);
-    console.log(customer.Basket);
+    if (!customer || !poster) {
+      throw new Error('Invalid customer or poster id');
+    }
     customer.Basket.splice(posterIndex, 1);
-    console.log(customer.Basket);
     customerArray[index] = customer;
     await save(customerArray);
   }
